@@ -1,0 +1,4 @@
+flask
+pandas
+acikit-learn
+werkzeug

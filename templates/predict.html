@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction</title>
+</head>
+<body>
+    <h1>Loan Prediction Form</h1>
+    <form action="/" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="income">Income (in INR):</label>
+        <input type="number" id="income" name="income" required><br><br>
+
+        <label for="loanAmount">Loan Amount (in INR):</label>
+        <input type="number" id="loanAmount" name="loanAmount" required><br><br>
+
+        <label for="creditScore">Credit Score:</label>
+        <input type="number" id="creditScore" name="creditScore" required><br><br>
+
+        <label for="employment">Employment Status:</label>
+        <select id="employment" name="employment" required>
+            <option value="employed">Employed</option>
+            <option value="self-employed">Self-Employed</option>
+            <option value="unemployed">Unemployed</option>
+        </select><br><br>
+
+        <button type="submit">Predict Loan Approval</button>
+    </form>
+
+    <div>
+        {% if result %}
+            <h2>{{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
